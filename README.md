@@ -1,5 +1,24 @@
 # README
 
+* git config --global user.name "NirupamaSantha"
+
+* git config --global user.email "nirupama.santha@gmail.com"
+
+* git config --global push.default matching
+
+* git config --global alias.co checkout
+
+* git init
+
+*****Add Files To Git
+
+* git add .
+
+* git commit -am "Commit Message"
+
+* git push
+
+
 ****Initialize Git
 
 * $ git config --global user.name "Your Name"
