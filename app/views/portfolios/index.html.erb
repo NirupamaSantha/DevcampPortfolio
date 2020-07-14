@@ -1,4 +1,11 @@
 <h1>Portfolio Items</h1>
+<a href="portfolios/new" title="">Create New Item</a>
+<!-- new_portfolio_path --Generates the route path -->
+<%=link_to	"Create New Item" , new_portfolio_path %>
+<!-- Gives the relative Path -->
+<p><%=	new_portfolio_path%></p>
+<!-- gives the URL full path -->
+<p><%=	new_portfolio_url%></p>
 
 <% @portfolio_items.each do |portfolio_item| %>
   <p><%= portfolio_item.title %></p>
