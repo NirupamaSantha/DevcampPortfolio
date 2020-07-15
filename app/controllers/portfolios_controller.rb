@@ -36,11 +36,25 @@ class PortfoliosController < ApplicationController
         format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
       end
     end
-    
+
   end
-def show
-@portfolio_item=Portfolio.find(params[:id])
-end
+    def show
+    @portfolio_item=Portfolio.find(params[:id])
+    end
+    # DELETE /blogs/1
+  # DELETE /blogs/1.json
+  def destroy
+    # This is going to perform the lookup
+    @portfolio_item=Portfolio.find(params[:id])
+    # DEstroy .delete the record
+    @portfolio_item.destroy
+# Redirect
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'portfolio_item was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
    private
    
     # Only allow a list of trusted parameters through.
